@@ -45,6 +45,8 @@ class ClienteController extends Controller
         $requestAll = $request->all();
         $dateNasc = DateTime::createFromFormat('d/m/Y', $request->data_nasc);
         $newDateNasc = $dateNasc->format('Y-m-d');
+        $newtel = str_replace(['-', '(', ')', ' '], '', $request->telefone);
+        $requestAll['telefone'] = $newtel;
         $requestAll['data_nasc'] = $newDateNasc;
         $cliente->create($requestAll);
         return redirect('/clientes');

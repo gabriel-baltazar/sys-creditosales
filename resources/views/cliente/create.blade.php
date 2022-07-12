@@ -35,6 +35,10 @@
                 maxlength="10">
             </div>
             <div class="form-group">
+                <label for="cep">CEP</label>
+                <input onkeyup="getAddress()" type="text" class="form-control" id="cep" name="cep" placeholder="00000000">
+            </div>
+            <div class="form-group">
                 <label for="endereco">Endereço</label>
                 <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Endereço">
             </div>
@@ -45,10 +49,6 @@
             <div class="form-group">
                 <label for="bairro">Bairro</label>
                 <input type="text" class="form-control" id="bairro" name="bairro" placeholder="Bairro">
-            </div>
-            <div class="form-group">
-                <label for="cep">CEP</label>
-                <input onkeyup="getAddress()" type="text" class="form-control" id="cep" name="cep" placeholder="00000000">
             </div>
             <div class="form-group">
                 <label for="cidade">Cidade</label>
