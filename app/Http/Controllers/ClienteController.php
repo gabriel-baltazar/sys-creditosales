@@ -13,9 +13,14 @@ class ClienteController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        $filter = $request->filter;
         $clientes = Cliente::all();
+        if($filter){
+            $clientes = Cliente::where('nome', 'LIKE', "%$filter%")->get();
+            $clientes = Cliente::where('email', 'LIKE', "%$filter%")->get();
+        }
         return view('cliente.index', compact('clientes'));
     }
 
