@@ -9,7 +9,7 @@
 <div class="col-12">
   <div class="card-dark">
     <div class="card-header">
-      <h3 class="card-title">Todos Usuarios</h3>
+      <h3 class="card-title">Todos os Usuarios</h3>
       <br>
       <form action="{{route('users.index')}}" method="GET">
       <div class="card-tools">

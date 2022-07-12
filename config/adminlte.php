@@ -258,7 +258,7 @@ return [
             'icon'    => 'fa fa-users',
             'submenu' => [
                 [
-                    'text' => 'Todos Clientes',
+                    'text' => 'Todos os Clientes',
                     'icon'    => '',
                     'url'  => 'clientes',
                 ],
@@ -274,7 +274,7 @@ return [
             'icon'    => 'fa fa-user',
             'submenu' => [
                 [
-                    'text' => 'Todos Usuarios',
+                    'text' => 'Todos os Usuarios',
                     'icon'    => '',
                     'url'  => 'users',
                 ],

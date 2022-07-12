@@ -18,10 +18,7 @@ class UserController extends Controller
         $filter = $request->filter;
         $users = User::all();
         if($filter){
-            $users = User::where('name', 'LIKE', "%$filter%")->get();
-        }
-        if($filter){
-            $users = User::where('email', 'LIKE', "%$filter%")->get();
+            $users = User::where('name', 'LIKE', "%$filter%")->orWhere('email', 'LIKE', "%$filter%")->get();
         }
         return view('users.index', compact('users'));
     }

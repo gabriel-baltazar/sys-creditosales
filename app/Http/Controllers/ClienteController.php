@@ -18,8 +18,7 @@ class ClienteController extends Controller
         $filter = $request->filter;
         $clientes = Cliente::all();
         if($filter){
-            $clientes = Cliente::where('nome', 'LIKE', "%$filter%")->get();
-            $clientes = Cliente::where('email', 'LIKE', "%$filter%")->get();
+            $clientes = Cliente::where('nome', 'LIKE', "%$filter%")->orWhere('email', 'LIKE', "%$filter%")->get();
         }
         return view('cliente.index', compact('clientes'));
     }
